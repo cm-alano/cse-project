@@ -478,7 +478,7 @@
                                                     <input
                                                         type="text"
                                                         name="jobtitle"
-                                                        id="examplace" required
+                                                        id="jobtitle" required
                                                         placeholder="Developer"
                                                         class="CSE-form-input" />
                                                 </div>
@@ -562,7 +562,7 @@
     </div>
 </body>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-
+<script src="APIServices.js"></script>
 <script>
     $(document).ready(function () {
 
@@ -697,13 +697,13 @@
         });
         $("#subbtn").click(function () {
 
-            GetExamHistoryObj();
+            //GetExamHistoryObj();
 
             //get textfield values ex: var firstname = $('#txtFirstName').val();
             var objperson = {
                 "firstname": $('#firstname').val(),
                 "lastname": $('#lastname').val(),
-                "middleinitial": $('#middleinitial').val(),
+                "middlename": $('#middleinitial').val(),
                 "birthdate": $('#birthdate').val(),
                 "sex": $('#sex').val(),
                 "citizenship": $('#citizenship').val(),
@@ -715,23 +715,28 @@
                 "civilStatus": $('#civilStatus').val(),
                 "pregnant": $('#pregnant').is(":checked") ? "Y" : "N",
                 "pwd": $('#pwd').is(":checked") ? "Y" : "N",
-                "disab": $('#disab').val(),
-                "mobilenum": $('#mobilenum').val(),
-                "telnum": $('#telnum').val(),
-                "emailadd": $('#emailadd').val(),
+                "disability": $('#disab').val(),
+                "mobilenumber": $('#mobilenum').val(),
+                "telnumber": $('#telnum').val(),
+                "emailaddress": $('#emailadd').val(),
                 "educationlevel": $('#educationlevel').val(),
-                "completion": $('#completion').val(),
+                "compltn": $('#completion').val(),
                 "graddate": $('#graddate').val(),
                 "highestyrlvl": $('#highestyrlvl').val(),
                 "program": $('#program').val(),
                 "major": $('#major').val(),
                 "schoolname": $('#schoolname').val(),
-                "schooladd": $('#schooladd').val(),
-                "yearfrom": $('#yearfrom').val(),
-                "yearto": $('#yearto').val()
+                "schooladdress": $('#schooladd').val(),
+                "inclusiveyears": $('#yearfrom').val() + "-" + $('#yearto').val(),
+                "presentemployment": $('#presentemployment').val(),
+                "agency": $('#agency').val(),
+                "agencyaddress": $('#agencyadd').val(),
+                "jobtitle": $('#jobtitle').val(),
+                "jobyears": $('#jobyears').val(),
+                "employmentstatus": $('#employment').val()
             }
 
-            submitapplication(objperson);
+            SubmitApplication(objperson);
         });
 
     });

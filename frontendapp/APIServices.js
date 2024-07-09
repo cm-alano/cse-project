@@ -1,5 +1,6 @@
 ﻿var APIServices = {
-    PersonList:[],
+    PersonList: [],
+    Applicant: {},
     GetPersonList: function(){
         $.ajax({
             type:"GET",
@@ -13,12 +14,14 @@
         });
     },
     AddApplicant: function (objPerson) {
+        APIServices.Applicant = objPerson;
+
         $.ajax({
             type: "POST",
             url: "https://localhost:7087/api/InsertApplicant",
             contentType: "application/json; charset=utf-8",
+            data: JSON.stringify(objPerson),
             dataType: "json",
-            data: objPerson,
             async: false,
             success: function (data) {
                 
