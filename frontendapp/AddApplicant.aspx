@@ -415,7 +415,7 @@
                                                     type="text"
                                                     name="exampassed"
                                                     placeholder=""
-                                                    id="exampassed" required
+                                                    id="exampassed0" required
                                                     class="CSE-form-input" />
                                             </div>
                                             <div class="CSE-input-flex" style="margin-top: 0px;">
@@ -426,7 +426,7 @@
                                                         name="rating"
                                                         min="1" max="10"
                                                         placeholder="1-10"
-                                                        id="rating" required
+                                                        id="rating0" required
                                                         class="CSE-form-input" />
                                                 </div>
                                                 <div>
@@ -434,7 +434,7 @@
                                                     <input
                                                         type="date"
                                                         name="examdate"
-                                                        id="examdate" required
+                                                        id="examdate0" required
                                                         class="CSE-form-input" />
                                                 </div>
                                                 <div>
@@ -442,7 +442,7 @@
                                                     <input
                                                         type="text"
                                                         name="examplace"
-                                                        id="examplace" required
+                                                        id="examplace0" required
                                                         class="CSE-form-input" />
                                                 </div>
                                             </div>
@@ -671,7 +671,6 @@
             });
 
             if (!inputsFilled) {
-                alert('Please fill all fields before adding a new one.');
                 return;
             }
 
@@ -697,6 +696,9 @@
             i++;
         });
         $("#subbtn").click(function () {
+
+            GetExamHistoryObj();
+
             //get textfield values ex: var firstname = $('#txtFirstName').val();
             var objperson = {
                 "firstname": $('#firstname').val(),
@@ -711,7 +713,7 @@
                 "height": $('#height').val(),
                 "weight": $('#weight').val(),
                 "civilStatus": $('#civilStatus').val(),
-                "pregnant": $('#pregnant').is(":checked")? "Y": "N",
+                "pregnant": $('#pregnant').is(":checked") ? "Y" : "N",
                 "pwd": $('#pwd').is(":checked") ? "Y" : "N",
                 "disab": $('#disab').val(),
                 "mobilenum": $('#mobilenum').val(),
@@ -726,18 +728,39 @@
                 "schoolname": $('#schoolname').val(),
                 "schooladd": $('#schooladd').val(),
                 "yearfrom": $('#yearfrom').val(),
-                "yearto": $('#yearto').val(),
-                "exampassed": $('#exampassed').val(),
-                "rating": $('#rating').val(),
-                "examdate": $('#examdate').val(),
-                "examplace": $('#examplace').val(),
-                "presentemployment": $('#presentemployment').val(),
-                "jobtitle": $('#jobtitle').val(),
-                "jobyears": $('#jobyears').val(),
-                "employmentstatus": $('#employment').val(),
-                "agency": $('#agency').val(),
-                "agencyadd": $('#agencyadd').val()
+                "yearto": $('#yearto').val()
             }
+
+            var examHistory = [];
+
+            //var examHistory = [
+            //    {
+            //        "applicantId": 0,
+            //        "exampassed": $('#exampassed').val(),
+            //        "rating": $('#rating').val(),
+            //        "examdate": $('#examdate').val(),
+            //        "examplace": $('#examplace').val(),
+            //        "presentemployment": $('#presentemployment').val(),
+            //        "jobtitle": $('#jobtitle').val(),
+            //        "jobyears": $('#jobyears').val(),
+            //        "employmentstatus": $('#employment').val(),
+            //        "agency": $('#agency').val(),
+            //        "agencyadd": $('#agencyadd').val()
+            //    },
+            //    {
+            //        "applicantId": 0,
+            //        "exampassed": $('#exampassed').val(),
+            //        "rating": $('#rating').val(),
+            //        "examdate": $('#examdate').val(),
+            //        "examplace": $('#examplace').val(),
+            //        "presentemployment": $('#presentemployment').val(),
+            //        "jobtitle": $('#jobtitle').val(),
+            //        "jobyears": $('#jobyears').val(),
+            //        "employmentstatus": $('#employment').val(),
+            //        "agency": $('#agency').val(),
+            //        "agencyadd": $('#agencyadd').val()
+            //    }
+            //]
             submitapplication(objperson);
         });
 
@@ -747,6 +770,26 @@
     {
        APIServices.AddApplicant(objPerson);
         
+    }
+
+    function GetExamHistoryObj()
+    {
+        var divGroup = $("div[id^='examdiv']");
+        var examHistory = [];
+
+        divGroup.each(function () {
+            var divId = this.id;
+            var idNumber = divId[divId.length - 1];
+            var exam =
+            {
+                "ApplicantId": 0,
+                "ExamPassed": $("#exampassed" + idNumber).val(),
+                "Rating": $("#rating" + idNumber).val(),
+                "ExamDate": $("#examdate" + idNumber).val(),
+                "ExamPlace": $("#examplace" + idNumber).val()
+            };
+            examHistory.push(exam);
+        });
     }
 </script>
 </html>
