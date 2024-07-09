@@ -2123,27 +2123,34 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\A S U S\\.nuget\\packages\\": {}
+    "C:\\Users\\crist6969\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\CSE-Project\\cse-project\\WebApplication1\\WebApplication1.csproj",
+      "projectUniqueName": "C:\\CMA\\personal\\helloworld\\cse-project\\cse-project\\WebApplication1\\WebApplication1.csproj",
       "projectName": "WebApplication1",
-      "projectPath": "C:\\CSE-Project\\cse-project\\WebApplication1\\WebApplication1.csproj",
-      "packagesPath": "C:\\Users\\A S U S\\.nuget\\packages\\",
-      "outputPath": "C:\\CSE-Project\\cse-project\\WebApplication1\\obj\\",
+      "projectPath": "C:\\CMA\\personal\\helloworld\\cse-project\\cse-project\\WebApplication1\\WebApplication1.csproj",
+      "packagesPath": "C:\\Users\\crist6969\\.nuget\\packages\\",
+      "outputPath": "C:\\CMA\\personal\\helloworld\\cse-project\\cse-project\\WebApplication1\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\A S U S\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\crist6969\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net6.0"
       ],
       "sources": {
+        "C:\\Local.Nuget": {},
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "https://api.nuget.org/v3/index.json": {}
+        "https://api.nuget.org/v3/index.json": {},
+        "https://liazon.myget.org/F/dev/auth/60ad5d3c-ba47-479a-8543-fda29ee71e13/api/v3/index.json": {}
       },
       "frameworks": {
         "net6.0": {
@@ -2155,11 +2162,6 @@
         "warnAsError": [
           "NU1605"
         ]
-      },
-      "restoreAuditProperties": {
-        "enableAudit": "true",
-        "auditLevel": "low",
-        "auditMode": "direct"
       }
     },
     "frameworks": {
@@ -2194,7 +2196,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.200\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.402\\RuntimeIdentifierGraph.json"
       }
     }
   }

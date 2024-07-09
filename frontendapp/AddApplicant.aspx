@@ -731,36 +731,6 @@
                 "yearto": $('#yearto').val()
             }
 
-            var examHistory = [];
-
-            //var examHistory = [
-            //    {
-            //        "applicantId": 0,
-            //        "exampassed": $('#exampassed').val(),
-            //        "rating": $('#rating').val(),
-            //        "examdate": $('#examdate').val(),
-            //        "examplace": $('#examplace').val(),
-            //        "presentemployment": $('#presentemployment').val(),
-            //        "jobtitle": $('#jobtitle').val(),
-            //        "jobyears": $('#jobyears').val(),
-            //        "employmentstatus": $('#employment').val(),
-            //        "agency": $('#agency').val(),
-            //        "agencyadd": $('#agencyadd').val()
-            //    },
-            //    {
-            //        "applicantId": 0,
-            //        "exampassed": $('#exampassed').val(),
-            //        "rating": $('#rating').val(),
-            //        "examdate": $('#examdate').val(),
-            //        "examplace": $('#examplace').val(),
-            //        "presentemployment": $('#presentemployment').val(),
-            //        "jobtitle": $('#jobtitle').val(),
-            //        "jobyears": $('#jobyears').val(),
-            //        "employmentstatus": $('#employment').val(),
-            //        "agency": $('#agency').val(),
-            //        "agencyadd": $('#agencyadd').val()
-            //    }
-            //]
             submitapplication(objperson);
         });
 
