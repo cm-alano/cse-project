@@ -40,39 +40,41 @@ namespace WebApplication1
                             while (reader.Read())
                             {
                                 Applicant person = new Applicant();
-                                person.ApplicantNumber = reader.IsDBNull(0) ? 0 : reader.GetInt32(0); 
-                                person.ApplicantName = reader.IsDBNull(1) ? "" : reader.GetString(1);
-                                person.Age = reader.IsDBNull(2) ? 0 : reader.GetInt32(2);
-                                person.BirthDate = reader.IsDBNull(3) ? DateTime.MinValue : reader.GetDateTime(3); 
-                                person.Sex = reader.IsDBNull(4) ? "" : reader.GetString(4);
-                                person.BirthPlace = reader.IsDBNull(5) ? "" : reader.GetString(5);
-                                person.Citizenship = reader.IsDBNull(6) ? "" : reader.GetString(6);
-                                person.NameOfMother = reader.IsDBNull(7) ? "" : reader.GetString(7);
-                                person.Address = reader.IsDBNull(8) ? "" : reader.GetString(8);
-                                person.Height = reader.IsDBNull(9) ? 0 : reader.GetInt32(9);
-                                person.Weight = reader.IsDBNull(10) ? 0 : reader.GetInt32(10);
-                                person.CivilStatus = reader.IsDBNull(11) ? "" : reader.GetString(11);
-                                person.Pregnant = reader.IsDBNull(12) ? "" : reader.GetString(12); 
-                                person.PWD = reader.IsDBNull(13) ? "" : reader.GetString(13);
-                                person.Disability = reader.IsDBNull(14) ? "" : reader.GetString(14);
-                                person.MobileNumber = reader.IsDBNull(15) ? "" : reader.GetString(15);
-                                person.TelNumber = reader.IsDBNull(16) ? "" : reader.GetString(16);
-                                person.EmailAddress = reader.IsDBNull(17) ? "" : reader.GetString(17);
-                                person.EducationLevel = reader.IsDBNull(18) ? "" : reader.GetString(18);
-                                person.CompLTN = reader.IsDBNull(19) ? "" : reader.GetString(19);
-                                person.HighestYrLvl = reader.IsDBNull(20)? "" : reader.GetString(20);
-                                person.GradDate = reader.IsDBNull(21) ? DateTime.MinValue : reader.GetDateTime(21);
-                                person.Program = reader.IsDBNull(22) ? "" : reader.GetString(22);
-                                person.Major = reader.IsDBNull(23) ? "" : reader.GetString(23);
-                                person.SchoolName = reader.IsDBNull(24) ? "" : reader.GetString(24);
-                                person.SchoolAddress = reader.IsDBNull(25) ? "" : reader.GetString(25);
-                                person.InclusiveYears = reader.IsDBNull(26) ? "" : reader.GetString(26);
-                                person.PresentEmployment = reader.IsDBNull(27) ? "" : reader.GetString(27);
-                                person.Agency = reader.IsDBNull(28) ? "" : reader.GetString(28);
-                                person.AgencyAddress = reader.IsDBNull(29) ? "" : reader.GetString(29);
-                                person.JobTitle = reader.IsDBNull(30) ? "" : reader.GetString(30);
-                                person.JobYears = reader.IsDBNull(31) ? 0 : reader.GetInt32(31);
-                                person.EmploymentStatus = reader.IsDBNull(32) ? "" : reader.GetString(32);
+                                person.ApplicantNumber = SafeGetString(reader, "ApplicantNum") == "" ? 0 : Convert.ToInt32(reader["ApplicantNum"]);
+                                person.FirstName = SafeGetString(reader, "FirstName");
+                                person.MiddleName = SafeGetString(reader, "MiddleName");
+                                person.LastName = SafeGetString(reader, "LastName");
+                                person.Age = SafeGetString(reader, "Age") == "" ? 0 : Convert.ToInt32(reader["Age"]);
+                                person.BirthDate = SafeGetString(reader, "BirthDate") == "" ? DateTime.MinValue : Convert.ToDateTime(reader["BirthDate"]); 
+                                person.Sex = SafeGetString(reader, "Sex");
+                                person.BirthPlace = SafeGetString(reader, "BirthPlace");
+                                person.Citizenship = SafeGetString(reader, "Citizenship");
+                                person.NameOfMother = SafeGetString(reader, "NameOfMother");
+                                person.Address = SafeGetString(reader, "Address");
+                                person.Height = SafeGetString(reader, "Height") == "" ? 0 : Convert.ToInt32(reader["Height"]);
+                                person.Weight = SafeGetString(reader, "Weight") == "" ? 0 : Convert.ToInt32(reader["Weight"]);
+                                person.CivilStatus = SafeGetString(reader, "CivilStatus");
+                                person.Pregnant = SafeGetString(reader, "Pregnant");
+                                person.PWD = SafeGetString(reader, "PWD");
+                                person.Disability = SafeGetString(reader, "Disability");
+                                person.MobileNumber = SafeGetString(reader, "MobileNum");
+                                person.TelNumber = SafeGetString(reader, "TelNum");
+                                person.EmailAddress = SafeGetString(reader, "EmailAdd");
+                                person.EducationLevel = SafeGetString(reader, "EducationLevel");
+                                person.CompLTN = SafeGetString(reader, "CompLTN");
+                                person.HighestYrLvl = SafeGetString(reader, "HighestYrLvl");
+                                person.GradDate = SafeGetString(reader, "GradDate") == "" ? DateTime.MinValue : Convert.ToDateTime(reader["GradDate"]);
+                                person.Program = SafeGetString(reader, "Program");
+                                person.Major = SafeGetString(reader, "Major");
+                                person.SchoolName = SafeGetString(reader, "SchoolName");
+                                person.SchoolAddress = SafeGetString(reader, "SchoolAdd");
+                                person.InclusiveYears = SafeGetString(reader, "InclusiveYears");
+                                person.PresentEmployment = SafeGetString(reader, "PresentEmployment");
+                                person.Agency = SafeGetString(reader, "Agency");
+                                person.AgencyAddress = SafeGetString(reader, "AgencyAdd");
+                                person.JobTitle = SafeGetString(reader, "JobTitle");
+                                person.JobYears = SafeGetString(reader, "JobYears") == "" ? 0 : Convert.ToInt32(reader["JobYears"]);
+                                person.EmploymentStatus = SafeGetString(reader, "EmploymentStatus");
 
                                 personList.Add(person);
                             }
@@ -97,7 +99,9 @@ namespace WebApplication1
                     connection.Open();
 
                     string sql = @"INSERT INTO APPLICANT 
-                            ([ApplicantName]
+                            ([FirstName]
+                            ,[MiddleName]
+                            ,[LastName]
                             ,[Age]
                             ,[Birthdate]
                             ,[Sex]
@@ -131,7 +135,9 @@ namespace WebApplication1
                             ,[EmploymentStatus]) 
                             OUTPUT INSERTED.ApplicantNum
                             values (
-                            @ApplicantName
+                            @FirstName
+                            ,@MiddleName
+                            ,@LastName
                             ,@Age
                             ,@Birthdate
                             ,@Sex
@@ -166,7 +172,9 @@ namespace WebApplication1
                             )";
                     SqlCommand cmd = connection.CreateCommand();
                     cmd.CommandText = sql;
-                    cmd.Parameters.AddWithValue("@ApplicantName", person.ApplicantName);
+                    cmd.Parameters.AddWithValue("@FirstName", person.FirstName);
+                    cmd.Parameters.AddWithValue("@MiddleName", person.MiddleName);
+                    cmd.Parameters.AddWithValue("@LastName", person.LastName);
                     cmd.Parameters.AddWithValue("@Age", person.Age);
                     cmd.Parameters.AddWithValue("@Birthdate", person.BirthDate);
                     cmd.Parameters.AddWithValue("@Sex", person.Sex);
@@ -330,5 +338,13 @@ namespace WebApplication1
             return response;
 
         }
+        public string SafeGetString(SqlDataReader reader, string fieldName)
+        {
+            int ordinal = reader.GetOrdinal(fieldName);
+            if (!reader.IsDBNull(ordinal))
+                return reader[fieldName].ToString();
+            return string.Empty;
+        }
+
     }
 }
