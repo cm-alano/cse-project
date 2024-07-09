@@ -17,7 +17,7 @@
 
         function AddPerson()
         {
-            HomeController.AddPerson($("#txtFirstName").val(), $("#txtLastName").val());
+            APIServices.AddPerson($("#txtFirstName").val(), $("#txtLastName").val());
         }
     </script>--%>
 </html>

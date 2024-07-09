@@ -70,7 +70,7 @@
     <Content Include="AddApplicant.aspx" />
     <Content Include="dashboard.css" />
     <Content Include="Home.aspx" />
-    <Content Include="Home.js" />
+    <Content Include="APIServices.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>

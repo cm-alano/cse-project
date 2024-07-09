@@ -79,7 +79,7 @@
         </div>
     </div>
 </body>
-<script type="text/javascript" src="Home.js"></script>
+<script type="text/javascript" src="APIServices.js"></script>
 <script type="text/javascript">
 
     const mobileScreen = window.matchMedia("(max-width: 990px )");
@@ -105,7 +105,7 @@
 
     function LoadTable()
     {
-        HomeController.GetPersonList();
+        APIServices.GetPersonList();
 
         $("#example").DataTable({
             "columns": [
@@ -114,7 +114,7 @@
                 { data: 'lastName' , title: 'Last Name'}
                 
             ],
-            "data": HomeController.PersonList
+            "data": APIServices.PersonList
         });
 
         
