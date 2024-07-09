@@ -71,6 +71,7 @@
     <Content Include="dashboard.css" />
     <Content Include="Home.aspx" />
     <Content Include="APIServices.js" />
+    <Content Include="Pages.css" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>

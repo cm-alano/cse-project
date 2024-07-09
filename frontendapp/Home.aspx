@@ -16,9 +16,9 @@
     <div class='dashboard'>
         <div class="dashboard-nav">
             <header>
-                <a href="#!" class="menu-toggle"><i class="fas fa-bars"></i></a><a href="#"
+                <a href="#!" class="menu-toggle"><i class="fas fa-bars"></i></a><a href="AddApplicant.aspx"
                     class="brand-logo"><i
-                        class="fas fa-anchor"></i><span>BRAND</span></a>
+                        class="fas fa-anchor"></i><span>CSC</span></a>
             </header>
             <nav class="dashboard-nav-list">
                 <a href="#" class="dashboard-nav-item"><i class="fas fa-home"></i>
