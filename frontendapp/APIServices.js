@@ -1,10 +1,11 @@
 ﻿var APIServices = {
     PersonList: [],
     Applicant: {},
+    isDeleted: false,
     GetPersonList: function () {
         $.ajax({
             type: "GET",
-            url: "https://localhost:7087/api/GetPersonList",
+            url: "https://localhost:7087/api/GetApplicants",
             contentType: "application/json; charset=utf-8",
             dataType: "json",
             async: false,
@@ -29,6 +30,22 @@
                
             }, error: function (e) {
                 console.log("Error in AddApplicant!");
+            }
+        });
+    },
+
+    DeleteApplicant: function (ApplicantID) {
+        
+        $.ajax({
+            type: "POST",
+            url: "https://localhost:7087/api/DeleteApplicant?personId="+ApplicantID,
+            contentType: "application/json; charset=utf-8",
+            dataType: "json",
+            async: false,
+            success: function (data) {
+                APIServices.isDeleted = true;
+            }, error: function (e) {
+                console.log("Error in DeleteApplicant!");
             }
         });
     }

@@ -3,14 +3,26 @@
   "WorkspaceRootPath": "C:\\CSE-Project\\cse-project\\WebApplication1\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{7F68F2C1-A2A4-4161-AC08-3429D0AB065C}|..\\frontendapp\\frontendapp.csproj|c:\\cse-project\\cse-project\\frontendapp\\addapplicant.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2D69F797-D457-4905-9E44-AA5B98584EDF}|WebApplication1.csproj|c:\\cse-project\\cse-project\\webapplication1\\databaseservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2D69F797-D457-4905-9E44-AA5B98584EDF}|WebApplication1.csproj|solutionrelative:databaseservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2D69F797-D457-4905-9E44-AA5B98584EDF}|WebApplication1.csproj|c:\\cse-project\\cse-project\\webapplication1\\model\\applicant.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2D69F797-D457-4905-9E44-AA5B98584EDF}|WebApplication1.csproj|solutionrelative:model\\applicant.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2D69F797-D457-4905-9E44-AA5B98584EDF}|WebApplication1.csproj|c:\\cse-project\\cse-project\\webapplication1\\controllers\\insertapplicant.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2D69F797-D457-4905-9E44-AA5B98584EDF}|WebApplication1.csproj|solutionrelative:controllers\\insertapplicant.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2D69F797-D457-4905-9E44-AA5B98584EDF}|WebApplication1.csproj|c:\\cse-project\\cse-project\\webapplication1\\controllers\\getapplicant.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2D69F797-D457-4905-9E44-AA5B98584EDF}|WebApplication1.csproj|solutionrelative:controllers\\getapplicant.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{7F68F2C1-A2A4-4161-AC08-3429D0AB065C}|..\\frontendapp\\frontendapp.csproj|c:\\cse-project\\cse-project\\frontendapp\\apiservices.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2D69F797-D457-4905-9E44-AA5B98584EDF}|WebApplication1.csproj|c:\\cse-project\\cse-project\\webapplication1\\controllers\\getpersonlist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2D69F797-D457-4905-9E44-AA5B98584EDF}|WebApplication1.csproj|solutionrelative:controllers\\getpersonlist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7F68F2C1-A2A4-4161-AC08-3429D0AB065C}|..\\frontendapp\\frontendapp.csproj|C:\\CSE-Project\\cse-project\\frontendapp\\dashboard.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{2D69F797-D457-4905-9E44-AA5B98584EDF}|WebApplication1.csproj|c:\\cse-project\\cse-project\\webapplication1\\controllers\\insertperson.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -18,6 +30,25 @@
     },
     {
       "AbsoluteMoniker": "D:0:0:{7F68F2C1-A2A4-4161-AC08-3429D0AB065C}|..\\frontendapp\\frontendapp.csproj|c:\\cse-project\\cse-project\\frontendapp\\viewdatabase.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2D69F797-D457-4905-9E44-AA5B98584EDF}|WebApplication1.csproj|c:\\cse-project\\cse-project\\webapplication1\\controllers\\deleteapplicant.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2D69F797-D457-4905-9E44-AA5B98584EDF}|WebApplication1.csproj|solutionrelative:controllers\\deleteapplicant.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2D69F797-D457-4905-9E44-AA5B98584EDF}|WebApplication1.csproj|c:\\cse-project\\cse-project\\webapplication1\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{2D69F797-D457-4905-9E44-AA5B98584EDF}|WebApplication1.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2D69F797-D457-4905-9E44-AA5B98584EDF}|WebApplication1.csproj|c:\\cse-project\\cse-project\\webapplication1\\controllers\\getpersonlist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2D69F797-D457-4905-9E44-AA5B98584EDF}|WebApplication1.csproj|solutionrelative:controllers\\getpersonlist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2D69F797-D457-4905-9E44-AA5B98584EDF}|WebApplication1.csproj|c:\\cse-project\\cse-project\\webapplication1\\model\\person.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2D69F797-D457-4905-9E44-AA5B98584EDF}|WebApplication1.csproj|solutionrelative:model\\person.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7F68F2C1-A2A4-4161-AC08-3429D0AB065C}|..\\frontendapp\\frontendapp.csproj|C:\\CSE-Project\\cse-project\\frontendapp\\dashboard.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{7F68F2C1-A2A4-4161-AC08-3429D0AB065C}|..\\frontendapp\\frontendapp.csproj|c:\\cse-project\\cse-project\\frontendapp\\updateperson.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
@@ -30,31 +61,8 @@
       "RelativeMoniker": "D:0:0:{2D69F797-D457-4905-9E44-AA5B98584EDF}|WebApplication1.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2D69F797-D457-4905-9E44-AA5B98584EDF}|WebApplication1.csproj|c:\\cse-project\\cse-project\\webapplication1\\model\\person.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2D69F797-D457-4905-9E44-AA5B98584EDF}|WebApplication1.csproj|solutionrelative:model\\person.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2D69F797-D457-4905-9E44-AA5B98584EDF}|WebApplication1.csproj|c:\\cse-project\\cse-project\\webapplication1\\databaseservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2D69F797-D457-4905-9E44-AA5B98584EDF}|WebApplication1.csproj|solutionrelative:databaseservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{2D69F797-D457-4905-9E44-AA5B98584EDF}|WebApplication1.csproj|c:\\cse-project\\cse-project\\webapplication1\\controllers\\updateperson.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2D69F797-D457-4905-9E44-AA5B98584EDF}|WebApplication1.csproj|solutionrelative:controllers\\updateperson.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2D69F797-D457-4905-9E44-AA5B98584EDF}|WebApplication1.csproj|c:\\cse-project\\cse-project\\webapplication1\\controllers\\getapplicant.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2D69F797-D457-4905-9E44-AA5B98584EDF}|WebApplication1.csproj|solutionrelative:controllers\\getapplicant.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7F68F2C1-A2A4-4161-AC08-3429D0AB065C}|..\\frontendapp\\frontendapp.csproj|c:\\cse-project\\cse-project\\frontendapp\\addapplicant.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2D69F797-D457-4905-9E44-AA5B98584EDF}|WebApplication1.csproj|c:\\cse-project\\cse-project\\webapplication1\\controllers\\insertapplicant.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2D69F797-D457-4905-9E44-AA5B98584EDF}|WebApplication1.csproj|solutionrelative:controllers\\insertapplicant.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2D69F797-D457-4905-9E44-AA5B98584EDF}|WebApplication1.csproj|c:\\cse-project\\cse-project\\webapplication1\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{2D69F797-D457-4905-9E44-AA5B98584EDF}|WebApplication1.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{7F68F2C1-A2A4-4161-AC08-3429D0AB065C}|..\\frontendapp\\frontendapp.csproj|C:\\CSE-Project\\cse-project\\frontendapp\\home.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
@@ -71,24 +79,37 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "UpdatePerson.aspx",
-              "DocumentMoniker": "C:\\CSE-Project\\cse-project\\frontendapp\\UpdatePerson.aspx",
-              "RelativeDocumentMoniker": "..\\frontendapp\\UpdatePerson.aspx",
-              "ToolTip": "C:\\CSE-Project\\cse-project\\frontendapp\\UpdatePerson.aspx",
-              "RelativeToolTip": "..\\frontendapp\\UpdatePerson.aspx",
-              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2024-07-11T01:09:59.415Z",
+              "DocumentIndex": 2,
+              "Title": "Applicant.cs",
+              "DocumentMoniker": "C:\\CSE-Project\\cse-project\\WebApplication1\\Model\\Applicant.cs",
+              "RelativeDocumentMoniker": "Model\\Applicant.cs",
+              "ToolTip": "C:\\CSE-Project\\cse-project\\WebApplication1\\Model\\Applicant.cs",
+              "RelativeToolTip": "Model\\Applicant.cs",
+              "ViewState": "AQIAABkAAAAAAAAAAAAIwCgAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-11T09:40:22.606Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 8,
+              "Title": "DeleteApplicant.cs",
+              "DocumentMoniker": "C:\\CSE-Project\\cse-project\\WebApplication1\\Controllers\\DeleteApplicant.cs",
+              "RelativeDocumentMoniker": "Controllers\\DeleteApplicant.cs",
+              "ToolTip": "C:\\CSE-Project\\cse-project\\WebApplication1\\Controllers\\DeleteApplicant.cs",
+              "RelativeToolTip": "Controllers\\DeleteApplicant.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-11T08:37:46.198Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "GetApplicant.cs",
               "DocumentMoniker": "C:\\CSE-Project\\cse-project\\WebApplication1\\Controllers\\GetApplicant.cs",
               "RelativeDocumentMoniker": "Controllers\\GetApplicant.cs",
@@ -101,33 +122,33 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 3,
               "Title": "InsertApplicant.cs",
               "DocumentMoniker": "C:\\CSE-Project\\cse-project\\WebApplication1\\Controllers\\InsertApplicant.cs",
               "RelativeDocumentMoniker": "Controllers\\InsertApplicant.cs",
               "ToolTip": "C:\\CSE-Project\\cse-project\\WebApplication1\\Controllers\\InsertApplicant.cs",
               "RelativeToolTip": "Controllers\\InsertApplicant.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAJAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAMAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-07-10T02:29:27.916Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 5,
               "Title": "APIServices.js",
               "DocumentMoniker": "C:\\CSE-Project\\cse-project\\frontendapp\\APIServices.js",
               "RelativeDocumentMoniker": "..\\frontendapp\\APIServices.js",
               "ToolTip": "C:\\CSE-Project\\cse-project\\frontendapp\\APIServices.js",
               "RelativeToolTip": "..\\frontendapp\\APIServices.js",
-              "ViewState": "AQIAADgAAAAAAAAAAAAgwFIAAAACAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAAIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
               "WhenOpened": "2024-07-09T05:26:44.281Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 0,
               "Title": "AddApplicant.aspx",
               "DocumentMoniker": "C:\\CSE-Project\\cse-project\\frontendapp\\AddApplicant.aspx",
               "RelativeDocumentMoniker": "..\\frontendapp\\AddApplicant.aspx",
@@ -140,7 +161,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 17,
               "Title": "Home.aspx",
               "DocumentMoniker": "C:\\CSE-Project\\cse-project\\frontendapp\\Home.aspx",
               "RelativeDocumentMoniker": "..\\frontendapp\\Home.aspx",
@@ -148,12 +169,11 @@
               "RelativeToolTip": "..\\frontendapp\\Home.aspx",
               "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2024-07-08T14:02:07.244Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-08T14:02:07.244Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 18,
               "Title": "DeletePerson.cs",
               "DocumentMoniker": "C:\\CSE-Project\\cse-project\\WebApplication1\\Controllers\\DeletePerson.cs",
               "RelativeDocumentMoniker": "Controllers\\DeletePerson.cs",
@@ -161,12 +181,11 @@
               "RelativeToolTip": "Controllers\\DeletePerson.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABUAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-08T14:02:07.324Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-08T14:02:07.324Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 16,
               "Title": "UpdatePerson.cs",
               "DocumentMoniker": "C:\\CSE-Project\\cse-project\\WebApplication1\\Controllers\\UpdatePerson.cs",
               "RelativeDocumentMoniker": "Controllers\\UpdatePerson.cs",
@@ -174,25 +193,49 @@
               "RelativeToolTip": "Controllers\\UpdatePerson.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAA3AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-08T14:02:07.357Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-08T14:02:07.357Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 9,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\CSE-Project\\cse-project\\WebApplication1\\appsettings.json",
               "RelativeDocumentMoniker": "appsettings.json",
               "ToolTip": "C:\\CSE-Project\\cse-project\\WebApplication1\\appsettings.json",
               "RelativeToolTip": "appsettings.json",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAB7AAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
               "WhenOpened": "2024-07-08T14:02:07.363Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
+              "Title": "DatabaseService.cs",
+              "DocumentMoniker": "C:\\CSE-Project\\cse-project\\WebApplication1\\DatabaseService.cs",
+              "RelativeDocumentMoniker": "DatabaseService.cs",
+              "ToolTip": "C:\\CSE-Project\\cse-project\\WebApplication1\\DatabaseService.cs",
+              "RelativeToolTip": "DatabaseService.cs",
+              "ViewState": "AQIAALwAAAAAAAAAAAAYwM0AAABMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-08T14:02:07.374Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "UpdatePerson.aspx",
+              "DocumentMoniker": "C:\\CSE-Project\\cse-project\\frontendapp\\UpdatePerson.aspx",
+              "RelativeDocumentMoniker": "..\\frontendapp\\UpdatePerson.aspx",
+              "ToolTip": "C:\\CSE-Project\\cse-project\\frontendapp\\UpdatePerson.aspx",
+              "RelativeToolTip": "..\\frontendapp\\UpdatePerson.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2024-07-11T01:09:59.415Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "InsertPerson.cs",
               "DocumentMoniker": "C:\\CSE-Project\\cse-project\\WebApplication1\\Controllers\\InsertPerson.cs",
               "RelativeDocumentMoniker": "Controllers\\InsertPerson.cs",
@@ -205,7 +248,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 7,
               "Title": "ViewDatabase.aspx",
               "DocumentMoniker": "C:\\CSE-Project\\cse-project\\frontendapp\\ViewDatabase.aspx",
               "RelativeDocumentMoniker": "..\\frontendapp\\ViewDatabase.aspx",
@@ -218,20 +261,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "DatabaseService.cs",
-              "DocumentMoniker": "C:\\CSE-Project\\cse-project\\WebApplication1\\DatabaseService.cs",
-              "RelativeDocumentMoniker": "DatabaseService.cs",
-              "ToolTip": "C:\\CSE-Project\\cse-project\\WebApplication1\\DatabaseService.cs",
-              "RelativeToolTip": "DatabaseService.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAHoBAAABAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-08T14:02:07.374Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 11,
               "Title": "Person.cs",
               "DocumentMoniker": "C:\\CSE-Project\\cse-project\\WebApplication1\\Model\\Person.cs",
               "RelativeDocumentMoniker": "Model\\Person.cs",
@@ -244,7 +274,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 15,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\CSE-Project\\cse-project\\WebApplication1\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
@@ -252,12 +282,11 @@
               "RelativeToolTip": "Program.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABoAAAAOAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-08T14:02:07.385Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-08T14:02:07.385Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 12,
               "Title": "dashboard.css",
               "DocumentMoniker": "C:\\CSE-Project\\cse-project\\frontendapp\\dashboard.css",
               "RelativeDocumentMoniker": "..\\frontendapp\\dashboard.css",
@@ -265,12 +294,11 @@
               "RelativeToolTip": "..\\frontendapp\\dashboard.css",
               "ViewState": "AQIAAK0BAAAAAAAAAAAUwLkBAAAPAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2024-07-08T14:02:08.288Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-08T14:02:08.288Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 14,
               "Title": "Pages.css",
               "DocumentMoniker": "C:\\CSE-Project\\cse-project\\frontendapp\\Pages.css",
               "RelativeDocumentMoniker": "..\\frontendapp\\Pages.css",
@@ -278,12 +306,11 @@
               "RelativeToolTip": "..\\frontendapp\\Pages.css",
               "ViewState": "AQIAADQBAAAAAAAAAAAAwEcBAAANAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2024-07-09T05:54:56.978Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-09T05:54:56.978Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 10,
               "Title": "GetPersonList.cs",
               "DocumentMoniker": "C:\\CSE-Project\\cse-project\\WebApplication1\\Controllers\\GetPersonList.cs",
               "RelativeDocumentMoniker": "Controllers\\GetPersonList.cs",

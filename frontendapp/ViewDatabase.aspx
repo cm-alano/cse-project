@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="https://cdn.datatables.net/2.0.8/css/dataTables.dataTables.css" />
     <script src="https://cdn.datatables.net/2.0.8/js/dataTables.min.js"></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"/>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script> 
 </head>
 <body>
     <div class='dashboard'>
@@ -92,80 +93,111 @@
             });
         });
 
+
         function LoadTable() {
-            APIServices.GetPersonList().then(data => {
-                console.log("Data received:", data); 
-                $("#example").DataTable({
-                    "columns": [
-                        { data: 'ApplicantNum', title: 'Applicant Number' },
-                        { data: 'Firstname', title: 'First Name' },
-                        { data: 'Middlename', title: 'Middle Name' },
-                        { data: 'Lastname', title: 'Last Name' },
-                        { data: 'Age', title: 'Age' },
-                        { data: 'Birthdate', title: 'Birthdate' },
-                        { data: 'Sex', title: 'Sex' },
-                        { data: 'BirthPlace', title: 'Birth Place' },
-                        { data: 'Citizenship', title: 'Citizenship' },
-                        { data: 'NameOfMother', title: 'Name of Mother' },
-                        { data: 'Address', title: 'Address' },
-                        { data: 'Height', title: 'Height' },
-                        { data: 'Weight', title: 'Weight' },
-                        { data: 'CivilStatus', title: 'Civil Status' },
-                        { data: 'Pregnant', title: 'Pregnant' },
-                        { data: 'PWD', title: 'PWD' },
-                        { data: 'MobileNum', title: 'Mobile Number' },
-                        { data: 'TelNum', title: 'Telephone Number' },
-                        { data: 'EmailAdd', title: 'Email Address' },
-                        { data: 'EducationLevel', title: 'Education Level' },
-                        { data: 'CompLTN', title: 'Completion' },
-                        { data: 'HighestYrLvL', title: 'Highest Year Level' },
-                        { data: 'GradDate', title: 'Graduation Date' },
-                        { data: 'Program', title: 'Program' },
-                        { data: 'Major', title: 'Major' },
-                        { data: 'SchoolName', title: 'School Name' },
-                        { data: 'SchoolAdd', title: 'School Address' },
-                        { data: 'InclusiveYears', title: 'Inclusive Years' },
-                        { data: 'PresentEmployment', title: 'Present Employment' },
-                        { data: 'Agency', title: 'Agency' },
-                        { data: 'AgencyAdd', title: 'Agency Address' },
-                        { data: 'JobTitle', title: 'Job Title' },
-                        { data: 'JobYears', title: 'Job Years' },
-                        { data: 'EmploymentStatus', title: 'Employment Status' },
-                        {
-                            data: null,
-                            title: 'Actions',
-                            defaultContent: `
-                                <a href="/Updateperson.aspx" title="Edit" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>
-                                <a class="delete" title="Delete" data-toggle="tooltip"><i class="material-icons">&#xE872;</i></a>
-                            `,
-                            orderable: false
-                        }
-                    ],
-                    "data": data,
-                    "responsive": true,
-                    "paging": true,     
-                    "searching": true,  
-                    "ordering": true,  
-                    "info": true,       
-                    "autoWidth": true,  
-                    "lengthMenu": [10, 25, 50, 75, 100],
-                    "language": {
-                        "emptyTable": "No data available in table", 
-                        "loadingRecords": "Loading...",            
-                        "processing": "Processing...",            
-                        "search": "Search:",                    
-                        "lengthMenu": "Show _MENU_ entries",    
-                        "paginate": {
-                            "first": "First",                      
-                            "last": "Last",                      
-                            "next": "Next",                        
-                            "previous": "Previous"            
-                        }
+            APIServices.GetPersonList();
+    
+            $("#example").DataTable({
+                "columns": [
+                    { data: 'applicantNumber', title: 'Applicant Number' },
+                    { data: 'firstName', title: 'First Name' },
+                    { data: 'middleName', title: 'Middle Name' },
+                    { data: 'lastName', title: 'Last Name' },
+                    { data: 'age', title: 'Age' },
+                    { data: 'birthDate', title: 'Birthdate' },
+                    { data: 'sex', title: 'Sex' },
+                    { data: 'birthPlace', title: 'Birth Place' },
+                    { data: 'citizenship', title: 'Citizenship' },
+                    { data: 'nameOfMother', title: 'Name of Mother' },
+                    { data: 'address', title: 'Address' },
+                    { data: 'height', title: 'Height' },
+                    { data: 'weight', title: 'Weight' },
+                    { data: 'civilStatus', title: 'Civil Status' },
+                    { data: 'pregnant', title: 'Pregnant' },
+                    { data: 'pwd', title: 'PWD' },
+                    { data: 'mobileNumber', title: 'Mobile Number' },
+                    { data: 'telNumber', title: 'Telephone Number' },
+                    { data: 'emailAddress', title: 'Email Address' },
+                    { data: 'educationLevel', title: 'Education Level' },
+                    { data: 'compLTN', title: 'Completion' },
+                    { data: 'highestYrLvl', title: 'Highest Year Level' },
+                    { data: 'gradDate', title: 'Graduation Date' },
+                    { data: 'program', title: 'Program' },
+                    { data: 'major', title: 'Major' },
+                    { data: 'schoolName', title: 'School Name' },
+                    { data: 'schoolAddress', title: 'School Address' },
+                    { data: 'inclusiveYears', title: 'Inclusive Years' },
+                    { data: 'presentEmployment', title: 'Present Employment' },
+                    { data: 'agency', title: 'Agency' },
+                    { data: 'agencyAddress', title: 'Agency Address' },
+                    { data: 'jobTitle', title: 'Job Title' },
+                    { data: 'jobYears', title: 'Job Years' },
+                    { data: 'employmentStatus', title: 'Employment Status' },
+                    {
+                        data: null,
+                        className: 'dt-center editor-edit',
+                        defaultContent: '<a href="UpdatePerson.aspx/"><i class="fa fa-pencil"/></a>',
+                        orderable: false
                     },
-                    "scrollX": true 
-                });
-            }).catch(error => {
-                console.error("Error fetching data:", error); // Debugging: Log any errors
+                    {   
+                        data: null,
+                        className: 'dt-center editor-delete',
+                        render: (data) => '<a onclick="ConfirmDelete(' + data.applicantNumber + ')"><i class="fa fa-trash"/></a>',
+                        orderable: false
+                    }
+                ],
+                "data": APIServices.PersonList,
+                "responsive": true,
+                "paging": true,
+                "searching": true,
+                "ordering": true,
+                "info": true,
+                "autoWidth": true,
+                "lengthMenu": [10, 25, 50, 75, 100],
+                "language": {
+                    "emptyTable": "No data available in table",
+                    "loadingRecords": "Loading...",
+                    "processing": "Processing...",
+                    "search": "Search:",
+                    "lengthMenu": "Show _MENU_ entries",
+                    "paginate": {
+                        "first": "First",
+                        "last": "Last",
+                        "next": "Next",
+                        "previous": "Previous"
+                    }
+                },
+                "scrollX": true
+            });
+        }
+
+        
+
+        function ConfirmDelete(ApplicantID) {
+            Swal.fire({
+                title: "Are you sure?",
+                text: "You won't be able to revert this!",
+                icon: "warning",
+                showCancelButton: true,
+                confirmButtonColor: "#3085d6",
+                cancelButtonColor: "#d33",
+                confirmButtonText: "Yes, delete it!"
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    APIServices.DeleteApplicant(ApplicantID);
+
+                    if (APIServices.isDeleted) { 
+                        Swal.fire({
+                            title: "Deleted!",
+                            text: "Applicant " + ApplicantID + "  has been deleted.",
+                            icon: "success"
+
+
+                        }).then((result) => {
+                            location.reload();
+                        })
+                    }
+                }
             });
         }
     </script>

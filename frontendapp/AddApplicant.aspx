@@ -95,11 +95,11 @@
                                     <div id="step1" class="CSE-form-step-active">
                                         <div class="CSE-input-flex" style="margin-bottom:10px">
                                             <div>
-                                                <label for="ExamType" class="CSE-form-label">Exam Type applied for </label>
+                                                <label for="examtype" class="CSE-form-label">Exam Type applied for </label>
                                                 <select
                                                     type="text"
-                                                    id="ExamType" required
-                                                    name="ExamType"
+                                                    id="examtype" required
+                                                    name="examtype"
                                                     class="CSE-form-input custom-select">
                                                     <option value="" disabled selected hidden>Select Exam Type </option>
                                                     <option value="CSE-Professional">CSE-Professional Exam</option>
@@ -108,11 +108,11 @@
                                                 </select>
                                             </div>
                                             <div>
-                                                <label for="ExamMode" class="CSE-form-label">Exam Mode Taken </label>
+                                                <label for="exammode" class="CSE-form-label">Exam Mode Taken </label>
                                                 <select
                                                     type="text"
-                                                    id="ExamMode" required
-                                                    name="ExamMode"
+                                                    id="exammode" required
+                                                    name="exammode"
                                                     class="CSE-form-input custom-select">
                                                     <option value="" disabled selected hidden>Select Exam Mode </option>
                                                     <option value="PPT">Pen and Paper Test</option>
@@ -746,11 +746,13 @@
                 "agencyaddress": $('#agencyadd').val(),
                 "jobtitle": $('#jobtitle').val(),
                 "jobyears": $('#jobyears').val(),
-                "employmentstatus": $('#employment').val()
+                "employmentstatus": $('#employment').val(),
+                "examtype": $('#examtype').val(),
+                "exammode": $('exammode').val()
             }
 
             console.log("Form data:", objperson); // Debugging line
-            SubmitApplication(objperson);
+           /* SubmitApplication(objperson);*/
         });
 
     });

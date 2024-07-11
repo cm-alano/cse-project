@@ -36,5 +36,9 @@
         public string JobTitle { get; set; }
         public int JobYears { get; set; }
         public string EmploymentStatus { get; set; }
+
+        public string ExamType { get; set; }
+
+        public string ExamMode { get; set; }
     }
 }

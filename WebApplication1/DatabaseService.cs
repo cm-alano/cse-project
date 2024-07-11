@@ -3,6 +3,8 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
 using System;
 using System.Data;
+using System.Linq.Expressions;
+using System.Runtime.Intrinsics.X86;
 using WebApplication1.Model;
 using static System.Net.Mime.MediaTypeNames;
 
@@ -206,12 +208,97 @@ namespace WebApplication1
                     PersonID = (int)cmd.ExecuteScalar();
 
                 }
+                InsertApplicationtoDB(PersonID, person.ExamType, person.ExamMode);
             }
             catch (SqlException e)
             {
                 //response = e.ToString();
             }
             return PersonID;
+        }
+
+        public bool InsertApplicationtoDB(int personID, string examtype, string exammode)
+        {
+            string examID = "";
+            switch (examtype)
+            {
+                case "CSE-Professional":
+                    {
+                        if (exammode == "PPT")
+                        {
+                            examID = "E01";
+                        }
+                        else if (exammode == "COMEX")
+                        {
+                            examID = "E03";
+                        }
+                    }
+                    break;
+                case "CSE-Subprofessional":
+                    {
+                        if (exammode == "PPT")
+                        {
+                            examID = "E02";
+                        }
+                        else if (exammode == "COMEX")
+                        {
+                            examID = "E04";
+                        }
+                    }
+                    break;
+            }
+
+            try
+            {
+                using (SqlConnection connection = new SqlConnection(ConnectionString))
+                {
+                    connection.Open();
+
+                    string sql = @"INSERT INTO APPLICATION 
+                            (
+                            ApplicantNum, Exam_ID
+                            ) 
+                            values (@ApplicantNum, @Exam_ID
+                            )";
+                    SqlCommand cmd = connection.CreateCommand();
+                    cmd.CommandText = sql;
+                    cmd.Parameters.AddWithValue("@ApplicantNum", personID);
+                    cmd.Parameters.AddWithValue("@Exam_ID", examID);
+                    cmd.ExecuteNonQuery();
+                }
+            }
+            catch (SqlException e)
+            {
+                return false;
+            }
+            return true;
+        }
+
+        public bool DeleteApplicant(int personId)
+        {
+            bool response = false;
+            try
+            {
+                using (SqlConnection connection = new SqlConnection(ConnectionString))
+                {
+                    connection.Open();
+
+                    string sql = "DELETE FROM Applicant WHERE ApplicantNum = @id";
+                    SqlCommand cmd = connection.CreateCommand();
+                    cmd.CommandText = sql;
+                    cmd.Parameters.AddWithValue("@id", personId);
+
+                    cmd.ExecuteNonQuery();
+
+                }
+                response = true;
+            }
+            catch (SqlException e)
+            {
+                response = false;
+            }
+            return response;
+
         }
 
         public List<Person> GetPersonList()

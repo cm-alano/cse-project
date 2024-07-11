@@ -1,5 +1,31 @@
 [
   {
+    "ContainingType": "WebApplication1.Controllers.DeleteApplicant",
+    "Method": "DeletePersonFromDB",
+    "RelativePath": "api/DeleteApplicant",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "personId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Boolean",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
     "ContainingType": "WebApplication1.Controllers.DeletePerson",
     "Method": "DeletePersonFromDB",
     "RelativePath": "api/DeletePerson",
