@@ -18,7 +18,6 @@
         public string CivilStatus { get; set; }
         public string Pregnant { get; set; }
         public string PWD { get; set; }
-        public string Disability { get; set; }
         public string MobileNumber { get; set; }
         public string TelNumber { get; set; }
         public string EmailAddress { get; set; }

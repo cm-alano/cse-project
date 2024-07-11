@@ -219,20 +219,22 @@
 
                                         <div class="CSE-input-flex">
                                             <div>
-                                                <label for="height" class="CSE-form-label">Height (in Meters) </label>
+                                                <label for="height" class="CSE-form-label">Height (cm) </label>
                                                 <input
-                                                    type="text"
+                                                    type="number"
                                                     name="height"
                                                     id="height" required
-                                                    placeholder="Meters"
+                                                    min="1" max="500"
+                                                    placeholder="Centimeters"
                                                     class="CSE-form-input" />
                                             </div>
                                             <div>
-                                                <label for="weight" class="CSE-form-label">weight (in kilos) </label>
+                                                <label for="weight" class="CSE-form-label">weight (kg) </label>
                                                 <input
-                                                    type="text"
+                                                    type="number"
                                                     name="weight"
                                                     id="weight" required
+                                                    min="1" max="500"
                                                     placeholder="kilograms"
                                                     class="CSE-form-input" />
                                             </div>
@@ -431,7 +433,7 @@
 
                                         <div class="CSE-input-flex" id="examdiv0">
                                             <div>
-                                                <label for="Exampassed0" class="CSE-form-label">Examination Passed </label>
+                                                <label for="exampassed0" class="CSE-form-label">Examination Passed </label>
                                                 <input
                                                     type="text"
                                                     name="exampassed"
@@ -515,7 +517,7 @@
                                                 </div>
 
                                                 <div>
-                                                    <label for="employmentstatus" class="CSE-form-label">Status of Employment </label>
+                                                    <label for="employment" class="CSE-form-label">Status of Employment </label>
                                                     <input
                                                         type="text"
                                                         name="employmentstatus"
