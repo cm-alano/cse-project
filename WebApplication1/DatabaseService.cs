@@ -33,7 +33,47 @@ namespace WebApplication1
                 {
                     connection.Open();
 
-                    String sql = "SELECT * FROM Applicant";
+                    String sql = @"SELECT 
+	                            A.ApplicantNum
+	                            ,[FirstName]
+                                ,[MiddleName]
+                                ,[LastName]
+                                ,[Age]
+                                ,[Birthdate]
+                                ,[Sex]
+                                ,[BirthPlace]
+                                ,[Citizenship]
+                                ,[NameOfMother]
+                                ,[Address]
+                                ,[Height]
+                                ,[Weight]
+                                ,[CivilStatus]
+                                ,[Pregnant]
+                                ,[PWD]
+                                ,[MobileNum]
+                                ,[TelNum]
+                                ,[EmailAdd]
+                                ,[EducationLevel]
+                                ,[CompLTN]
+                                ,[HighestYrLvL]
+                                ,[GradDate]
+                                ,[Program]
+                                ,[Major]
+                                ,[SchoolName]
+                                ,[SchoolAdd]
+                                ,[InclusiveYears]
+                                ,[PresentEmployment]
+                                ,[Agency]
+                                ,[AgencyAdd]
+                                ,[JobTitle]
+                                ,[JobYears]
+                                ,[EmploymentStatus] 
+	                            ,B.Exam_ID
+	                            ,C.ExamType
+	                            ,C.ExamMode
+                            FROM Applicant A 
+                            INNER JOIN [Application] B ON A.ApplicantNum = B.ApplicantNum
+                            INNER JOIN [Exam] C ON C.Exam_ID = B.Exam_ID";
 
                     using (SqlCommand command = new SqlCommand(sql, connection))
                     {
@@ -76,7 +116,8 @@ namespace WebApplication1
                                 person.JobTitle = SafeGetString(reader, "JobTitle");
                                 person.JobYears = SafeGetString(reader, "JobYears") == "" ? 0 : Convert.ToInt32(reader["JobYears"]);
                                 person.EmploymentStatus = SafeGetString(reader, "EmploymentStatus");
-
+                                person.ExamType = SafeGetString(reader, "ExamType");
+                                person.ExamMode = SafeGetString(reader, "ExamMode");
                                 personList.Add(person);
                             }
                         }
@@ -301,159 +342,36 @@ namespace WebApplication1
 
         }
 
-        public List<Person> GetPersonList()
-        {
-            List<Person> personList = new List<Person>();
+        //public string UpdatePersonDetails(Person person) 
+        //{
+        //    string response = "";
+        //    try
+        //    {
+        //        using (SqlConnection connection = new SqlConnection(ConnectionString))
+        //        {
+        //            connection.Open();
 
-            try
-            {
-                using (SqlConnection connection = new SqlConnection(ConnectionString))
-                {
-                    connection.Open();
+        //            string sql = "UPDATE Person SET FirstName = @firstname, LastName = @lastname WHERE ID = @id";
+        //            SqlCommand cmd = connection.CreateCommand();
+        //            cmd.CommandText = sql;
 
-                    String sql = "SELECT * FROM Person";
+        //            cmd.Parameters.AddWithValue("@id", person.ApplicantNum);
+        //            cmd.Parameters.AddWithValue("@firstname", person.FirstName);
+        //            cmd.Parameters.AddWithValue("@lastname", person.LastName);
 
-                    using (SqlCommand command = new SqlCommand(sql, connection))
-                    {
-                        using (SqlDataReader reader = command.ExecuteReader())
-                        {
-                            while (reader.Read())
-                            {
-                                Person person = new Person();
-                                person.ApplicantNum = reader.GetInt32(0);
-                                person.FirstName = reader.GetString(1);
-                                person.LastName = reader.GetString(2);
+        //            cmd.ExecuteNonQuery();
 
-                                personList.Add(person);
-                            }
-                        }
-                    }
-                }
-            }
-            catch (SqlException e)
-            {
-                Console.WriteLine(e.ToString());
-            }
+        //        }
+        //        response = "";
+        //    }
+        //    catch (SqlException e)
+        //    {
+        //        response = e.ToString();
+        //    }
+        //    return response;
 
-            return personList;
-        }
+        //}
 
-        public string InsertPersonToDB(Person person)
-        {
-            string response = "";
-            try
-            {
-                using (SqlConnection connection = new SqlConnection(ConnectionString))
-                {
-                    connection.Open();
-
-                    string sql = @"
-                INSERT INTO person (firstname, lastname, middlename, birthdate, sex, citizenship, birthplace, nameofmother, address, height, weight, civilstatus, pregnant, pwd, mobilenumber, telnumber, emailaddress, educationlevel, compltn, graddate, highestyrlvl, program, major, schoolname, schooladdress, inclusiveyears, presentemployment, agency, agencyaddress, jobtitle, jobyears, employmentstatus) 
-                VALUES (@firstname, @lastname, @middlename, @birthdate, @sex, @citizenship, @birthplace, @nameofmother, @address, @height, @weight, @civilstatus, @pregnant, @pwd, @mobilenumber, @telnumber, @emailaddress, @educationlevel, @compltn, @graddate, @highestyrlvl, @program, @major, @schoolname, @schooladdress, @inclusiveyears, @presentemployment, @agency, @agencyaddress, @jobtitle, @jobyears, @employmentstatus)";
-
-                    SqlCommand cmd = connection.CreateCommand();
-                    cmd.CommandText = sql;
-                    cmd.Parameters.AddWithValue("@firstname", person.FirstName);
-                    cmd.Parameters.AddWithValue("@lastname", person.LastName);
-                    cmd.Parameters.AddWithValue("@middlename", person.MiddleName);
-                    cmd.Parameters.AddWithValue("@birthdate", person.BirthDate);
-                    cmd.Parameters.AddWithValue("@sex", person.Sex);
-                    cmd.Parameters.AddWithValue("@citizenship", person.Citizenship);
-                    cmd.Parameters.AddWithValue("@birthplace", person.BirthPlace);
-                    cmd.Parameters.AddWithValue("@nameofmother", person.NameOfMother);
-                    cmd.Parameters.AddWithValue("@address", person.Address);
-                    cmd.Parameters.AddWithValue("@height", person.Height);
-                    cmd.Parameters.AddWithValue("@weight", person.Weight);
-                    cmd.Parameters.AddWithValue("@civilstatus", person.CivilStatus);
-                    cmd.Parameters.AddWithValue("@pregnant", person.Pregnant);
-                    cmd.Parameters.AddWithValue("@pwd", person.Pwd);
-                    cmd.Parameters.AddWithValue("@mobilenumber", person.MobileNumber);
-                    cmd.Parameters.AddWithValue("@telnumber", person.TelNumber);
-                    cmd.Parameters.AddWithValue("@emailaddress", person.EmailAddress);
-                    cmd.Parameters.AddWithValue("@educationlevel", person.EducationLevel);
-                    cmd.Parameters.AddWithValue("@compltn", person.Completion);
-                    cmd.Parameters.AddWithValue("@graddate", person.GradDate);
-                    cmd.Parameters.AddWithValue("@highestyrlvl", person.HighestYrLvl);
-                    cmd.Parameters.AddWithValue("@program", person.Program);
-                    cmd.Parameters.AddWithValue("@major", person.Major);
-                    cmd.Parameters.AddWithValue("@schoolname", person.SchoolName);
-                    cmd.Parameters.AddWithValue("@schooladdress", person.SchoolAddress);
-                    cmd.Parameters.AddWithValue("@inclusiveyears", person.InclusiveYears);
-                    cmd.Parameters.AddWithValue("@presentemployment", person.PresentEmployment);
-                    cmd.Parameters.AddWithValue("@agency", person.Agency);
-                    cmd.Parameters.AddWithValue("@agencyaddress", person.AgencyAddress);
-                    cmd.Parameters.AddWithValue("@jobtitle", person.JobTitle);
-                    cmd.Parameters.AddWithValue("@jobyears", person.JobYears);
-                    cmd.Parameters.AddWithValue("@employmentstatus", person.EmploymentStatus);
-
-                    cmd.ExecuteNonQuery();
-
-                }
-                response = "";
-            }
-            catch (SqlException e)
-            {
-                response = e.ToString();
-            }
-            return response;
-        }
-
-        public string UpdatePersonDetails(Person person) 
-        {
-            string response = "";
-            try
-            {
-                using (SqlConnection connection = new SqlConnection(ConnectionString))
-                {
-                    connection.Open();
-
-                    string sql = "UPDATE Person SET FirstName = @firstname, LastName = @lastname WHERE ID = @id";
-                    SqlCommand cmd = connection.CreateCommand();
-                    cmd.CommandText = sql;
-
-                    cmd.Parameters.AddWithValue("@id", person.ApplicantNum);
-                    cmd.Parameters.AddWithValue("@firstname", person.FirstName);
-                    cmd.Parameters.AddWithValue("@lastname", person.LastName);
-
-                    cmd.ExecuteNonQuery();
-
-                }
-                response = "";
-            }
-            catch (SqlException e)
-            {
-                response = e.ToString();
-            }
-            return response;
-
-        }
-
-        public bool DeletePerson(int personId)
-        {
-            bool response = false;
-            try
-            {
-                using (SqlConnection connection = new SqlConnection(ConnectionString))
-                {
-                    connection.Open();
-
-                    string sql = "DELETE FROM Person WHERE ID = @id";
-                    SqlCommand cmd = connection.CreateCommand();
-                    cmd.CommandText = sql;
-                    cmd.Parameters.AddWithValue("@id", personId);
-
-                    cmd.ExecuteNonQuery();
-
-                }
-                response = true;
-            }
-            catch (SqlException e)
-            {
-                response = false;
-            }
-            return response;
-
-        }
         public string SafeGetString(SqlDataReader reader, string fieldName)
         {
             int ordinal = reader.GetOrdinal(fieldName);

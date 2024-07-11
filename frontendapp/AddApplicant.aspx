@@ -711,7 +711,7 @@
         });
         $("#subbtn").click(function () {
 
-            //GetExamHistoryObj();
+            APIServices.ExamHistory = GetExamHistoryObj();
 
             //get textfield values ex: var firstname = $('#txtFirstName').val();
             var objperson = {
@@ -748,11 +748,12 @@
                 "jobyears": $('#jobyears').val(),
                 "employmentstatus": $('#employment').val(),
                 "examtype": $('#examtype').val(),
-                "exammode": $('exammode').val()
+                "exammode": $('#exammode').val()
             }
 
-            console.log("Form data:", objperson); // Debugging line
-           /* SubmitApplication(objperson);*/
+            //console.log("Form data:", objperson); // Debugging line
+
+           SubmitApplication(objperson);
         });
 
     });
@@ -792,6 +793,7 @@
             };
             examHistory.push(exam);
         });
+        return examHistory;
     }
 </script>
 </html>

@@ -175,7 +175,7 @@
 
         function ConfirmDelete(ApplicantID) {
             Swal.fire({
-                title: "Are you sure?",
+                title: "Are you sure you want to delete Applicant "+ ApplicantID +"?",
                 text: "You won't be able to revert this!",
                 icon: "warning",
                 showCancelButton: true,

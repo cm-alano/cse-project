@@ -2,6 +2,7 @@
     PersonList: [],
     Applicant: {},
     isDeleted: false,
+    ExamHistory: {},
     GetPersonList: function () {
         $.ajax({
             type: "GET",

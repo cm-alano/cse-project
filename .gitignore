@@ -397,3 +397,5 @@ FodyWeavers.xsd
 # JetBrains Rider
 *.sln.iml
 *.vsidx
+
+WebApplication1/.vs/
