@@ -16,25 +16,25 @@
     <div class='dashboard'>
         <div class="dashboard-nav">
             <header>
-                <a href="#!" class="menu-toggle"><i class="fas fa-bars"></i></a><a href="AddApplicant.aspx"
-                    class="brand-logo"><i
-                        class="fas fa-anchor"></i><span>CSC</span></a>
+                <a href="#!" class="menu-toggle"><i class="fas fa-bars"></i></a><a href="Home.aspx"
+                    class="brand-logo"><img
+                        img src="https://cscro6.wordpress.com/wp-content/uploads/2017/09/cropped-csc-logo-new-1024x768px.png?w=265"/><span>Database</span></a>
             </header>
-            <nav class="dashboard-nav-list">
-                <a href="#" class="dashboard-nav-item"><i class="fas fa-home"></i>
-                    Home </a><a
-                        href="#" class="dashboard-nav-item active"><i class="fas fa-tachometer-alt"></i>dashboard
-                    </a><a
-                        href="#" class="dashboard-nav-item"><i class="fas fa-file-upload"></i>Upload </a>
-                <div class='dashboard-nav-dropdown'>
-                    <a href="#!" class="dashboard-nav-item dashboard-nav-dropdown-toggle"><i
-                        class="fas fa-photo-video"></i>Media </a>
-                    <div class='dashboard-nav-dropdown-menu'>
-                        <a href="#"
-                            class="dashboard-nav-dropdown-item">All</a><a
-                                href="#" class="dashboard-nav-dropdown-item">Recent</a><a
-                                    href="#" class="dashboard-nav-dropdown-item">Images</a><a
-                                        href="#" class="dashboard-nav-dropdown-item">Video</a>
+           <nav class="dashboard-nav-list">
+    <a href="Home.aspx" class="dashboard-nav-item"><i class="fas fa-home"></i>
+        Home </a><a
+            href="AddApplicant.aspx" class="dashboard-nav-item active"><i class= "fas fa-user-plus"></i>Add Applicant
+        </a><a
+            href="ViewDatabase.aspx" class="dashboard-nav-item"><i class="fa-solid fa-folder-open"></i>View Database </a>
+    <div class='dashboard-nav-dropdown'>
+        <a href="#!" class="dashboard-nav-item dashboard-nav-dropdown-toggle"><i
+            class="fas fa-photo-video"></i>Media </a>
+        <div class='dashboard-nav-dropdown-menu'>
+            <a href="#"
+                class="dashboard-nav-dropdown-item">All</a><a
+                    href="#" class="dashboard-nav-dropdown-item">Recent</a><a
+                        href="#" class="dashboard-nav-dropdown-item">Images</a><a
+                            href="#" class="dashboard-nav-dropdown-item">Video</a>
                     </div>
                 </div>
                 <div class='dashboard-nav-dropdown'>
@@ -72,52 +72,11 @@
             <div class='dashboard-content'>
                 <div class='container'>
                     <div>
-                        <table id="example" class="display" width="100%"></table>
+                        <%--<table id="example" class="display" width="100%"></table>--%>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </body>
-<script type="text/javascript" src="APIServices.js"></script>
-<script type="text/javascript">
-
-    const mobileScreen = window.matchMedia("(max-width: 990px )");
-    $(document).ready(function () {
-        LoadTable();
-        $(".dashboard-nav-dropdown-toggle").click(function () {
-            $(this).closest(".dashboard-nav-dropdown")
-                .toggleClass("show")
-                .find(".dashboard-nav-dropdown")
-                .removeClass("show");
-            $(this).parent()
-                .siblings()
-                .removeClass("show");
-        });
-        $(".menu-toggle").click(function () {
-            if (mobileScreen.matches) {
-                $(".dashboard-nav").toggleClass("mobile-show");
-            } else {
-                $(".dashboard").toggleClass("dashboard-compact");
-            }
-        });
-    });
-
-    function LoadTable()
-    {
-        APIServices.GetPersonList();
-
-        $("#example").DataTable({
-            "columns": [
-                { data: 'id', title: 'ID' },
-                { data: 'firstName' , title: 'First Name'},
-                { data: 'lastName' , title: 'Last Name'}
-                
-            ],
-            "data": APIServices.PersonList
-        });
-
-        
-    }
-</script>
 </html>

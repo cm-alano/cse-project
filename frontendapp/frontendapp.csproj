@@ -69,9 +69,12 @@
   <ItemGroup>
     <Content Include="AddApplicant.aspx" />
     <Content Include="dashboard.css" />
+    <Content Include="DeletePerson.aspx" />
     <Content Include="Home.aspx" />
     <Content Include="APIServices.js" />
     <Content Include="Pages.css" />
+    <Content Include="UpdatePerson.aspx" />
+    <Content Include="ViewDatabase.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -82,6 +85,13 @@
     <Compile Include="AddApplicant.aspx.designer.cs">
       <DependentUpon>AddApplicant.aspx</DependentUpon>
     </Compile>
+    <Compile Include="DeletePerson.aspx.cs">
+      <DependentUpon>DeletePerson.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DeletePerson.aspx.designer.cs">
+      <DependentUpon>DeletePerson.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Home.aspx.cs">
       <DependentUpon>Home.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -90,6 +100,20 @@
       <DependentUpon>Home.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UpdatePerson.aspx.cs">
+      <DependentUpon>UpdatePerson.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UpdatePerson.aspx.designer.cs">
+      <DependentUpon>UpdatePerson.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ViewDatabase.aspx.cs">
+      <DependentUpon>ViewDatabase.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewDatabase.aspx.designer.cs">
+      <DependentUpon>ViewDatabase.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

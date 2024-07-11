@@ -26,6 +26,16 @@
     ]
   },
   {
+    "ContainingType": "WebApplication1.Controllers.GetApplicants",
+    "Method": "GetApplicantsList",
+    "RelativePath": "api/GetApplicants",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "WebApplication1.Controllers.GetPersonList",
     "Method": "GetPerson",
     "RelativePath": "api/GetPersonList",
@@ -34,6 +44,32 @@
     "Order": 0,
     "Parameters": [],
     "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApplication1.Controllers.InsertApplicant",
+    "Method": "InsertApplicantToDB",
+    "RelativePath": "api/InsertApplicant",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "person",
+        "Type": "WebApplication1.Model.Applicant",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Int32",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
   },
   {
     "ContainingType": "WebApplication1.Controllers.InsertPerson",

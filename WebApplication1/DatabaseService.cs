@@ -56,7 +56,6 @@ namespace WebApplication1
                                 person.CivilStatus = SafeGetString(reader, "CivilStatus");
                                 person.Pregnant = SafeGetString(reader, "Pregnant");
                                 person.PWD = SafeGetString(reader, "PWD");
-                                person.Disability = SafeGetString(reader, "Disability");
                                 person.MobileNumber = SafeGetString(reader, "MobileNum");
                                 person.TelNumber = SafeGetString(reader, "TelNum");
                                 person.EmailAddress = SafeGetString(reader, "EmailAdd");
@@ -114,7 +113,6 @@ namespace WebApplication1
                             ,[CivilStatus]
                             ,[Pregnant]
                             ,[PWD]
-                            ,[Disability]
                             ,[MobileNum]
                             ,[TelNum]
                             ,[EmailAdd]
@@ -150,7 +148,6 @@ namespace WebApplication1
                             ,@CivilStatus
                             ,@Pregnant
                             ,@PWD
-                            ,@Disability
                             ,@MobileNum
                             ,@TelNum
                             ,@EmailAdd
@@ -187,7 +184,6 @@ namespace WebApplication1
                     cmd.Parameters.AddWithValue("@CivilStatus", person.CivilStatus);
                     cmd.Parameters.AddWithValue("@Pregnant", person.Pregnant);
                     cmd.Parameters.AddWithValue("@PWD", person.PWD);
-                    cmd.Parameters.AddWithValue("@Disability", person.Disability);
                     cmd.Parameters.AddWithValue("@MobileNum", person.MobileNumber);
                     cmd.Parameters.AddWithValue("@TelNum", person.TelNumber);
                     cmd.Parameters.AddWithValue("@EmailAdd", person.EmailAddress);
@@ -237,7 +233,7 @@ namespace WebApplication1
                             while (reader.Read())
                             {
                                 Person person = new Person();
-                                person.ID = reader.GetInt32(0);
+                                person.ApplicantNum = reader.GetInt32(0);
                                 person.FirstName = reader.GetString(1);
                                 person.LastName = reader.GetString(2);
 
@@ -264,11 +260,44 @@ namespace WebApplication1
                 {
                     connection.Open();
 
-                    string sql = "INSERT INTO person (firstname,lastname) values (@firstname,@lastname)";
+                    string sql = @"
+                INSERT INTO person (firstname, lastname, middlename, birthdate, sex, citizenship, birthplace, nameofmother, address, height, weight, civilstatus, pregnant, pwd, mobilenumber, telnumber, emailaddress, educationlevel, compltn, graddate, highestyrlvl, program, major, schoolname, schooladdress, inclusiveyears, presentemployment, agency, agencyaddress, jobtitle, jobyears, employmentstatus) 
+                VALUES (@firstname, @lastname, @middlename, @birthdate, @sex, @citizenship, @birthplace, @nameofmother, @address, @height, @weight, @civilstatus, @pregnant, @pwd, @mobilenumber, @telnumber, @emailaddress, @educationlevel, @compltn, @graddate, @highestyrlvl, @program, @major, @schoolname, @schooladdress, @inclusiveyears, @presentemployment, @agency, @agencyaddress, @jobtitle, @jobyears, @employmentstatus)";
+
                     SqlCommand cmd = connection.CreateCommand();
                     cmd.CommandText = sql;
                     cmd.Parameters.AddWithValue("@firstname", person.FirstName);
                     cmd.Parameters.AddWithValue("@lastname", person.LastName);
+                    cmd.Parameters.AddWithValue("@middlename", person.MiddleName);
+                    cmd.Parameters.AddWithValue("@birthdate", person.BirthDate);
+                    cmd.Parameters.AddWithValue("@sex", person.Sex);
+                    cmd.Parameters.AddWithValue("@citizenship", person.Citizenship);
+                    cmd.Parameters.AddWithValue("@birthplace", person.BirthPlace);
+                    cmd.Parameters.AddWithValue("@nameofmother", person.NameOfMother);
+                    cmd.Parameters.AddWithValue("@address", person.Address);
+                    cmd.Parameters.AddWithValue("@height", person.Height);
+                    cmd.Parameters.AddWithValue("@weight", person.Weight);
+                    cmd.Parameters.AddWithValue("@civilstatus", person.CivilStatus);
+                    cmd.Parameters.AddWithValue("@pregnant", person.Pregnant);
+                    cmd.Parameters.AddWithValue("@pwd", person.Pwd);
+                    cmd.Parameters.AddWithValue("@mobilenumber", person.MobileNumber);
+                    cmd.Parameters.AddWithValue("@telnumber", person.TelNumber);
+                    cmd.Parameters.AddWithValue("@emailaddress", person.EmailAddress);
+                    cmd.Parameters.AddWithValue("@educationlevel", person.EducationLevel);
+                    cmd.Parameters.AddWithValue("@compltn", person.Completion);
+                    cmd.Parameters.AddWithValue("@graddate", person.GradDate);
+                    cmd.Parameters.AddWithValue("@highestyrlvl", person.HighestYrLvl);
+                    cmd.Parameters.AddWithValue("@program", person.Program);
+                    cmd.Parameters.AddWithValue("@major", person.Major);
+                    cmd.Parameters.AddWithValue("@schoolname", person.SchoolName);
+                    cmd.Parameters.AddWithValue("@schooladdress", person.SchoolAddress);
+                    cmd.Parameters.AddWithValue("@inclusiveyears", person.InclusiveYears);
+                    cmd.Parameters.AddWithValue("@presentemployment", person.PresentEmployment);
+                    cmd.Parameters.AddWithValue("@agency", person.Agency);
+                    cmd.Parameters.AddWithValue("@agencyaddress", person.AgencyAddress);
+                    cmd.Parameters.AddWithValue("@jobtitle", person.JobTitle);
+                    cmd.Parameters.AddWithValue("@jobyears", person.JobYears);
+                    cmd.Parameters.AddWithValue("@employmentstatus", person.EmploymentStatus);
 
                     cmd.ExecuteNonQuery();
 
@@ -295,7 +324,7 @@ namespace WebApplication1
                     SqlCommand cmd = connection.CreateCommand();
                     cmd.CommandText = sql;
 
-                    cmd.Parameters.AddWithValue("@id", person.ID);
+                    cmd.Parameters.AddWithValue("@id", person.ApplicantNum);
                     cmd.Parameters.AddWithValue("@firstname", person.FirstName);
                     cmd.Parameters.AddWithValue("@lastname", person.LastName);
 

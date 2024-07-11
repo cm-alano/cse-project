@@ -1,10 +1,10 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="AddApplicant.aspx.cs" Inherits="frontendapp.AddApplicant" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="UpdatePerson.aspx.cs" Inherits="frontendapp.UpdatePerson" %>
 
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title></title>
+    <title>Edit Applicant</title>
     <link rel="stylesheet" href="dashboard.css" />
     <link rel="stylesheet" href="Pages.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
@@ -74,7 +74,7 @@
                     <div>
                         <div class="CSE-Main-Wrapper">
                             <div class="CSE-form-wrapper">
-                                <form id="addform" method="post">
+                                <form id="editform" method="post">
                                     <div class="CSE-steps">
                                         <ul>
                                             <li id="stepnum1" class="active">
@@ -578,6 +578,55 @@
 <script>
     $(document).ready(function () {
 
+        function fetchApplicantDetails(applicantId) {
+         
+            $.ajax({
+                url: 'api/UpdatePerson', 
+                method: 'GET',
+                data: { id: applicantId },
+                success: function (response) {
+
+                    $('#applicantnum').val(response.ApplicantNum);
+                    $('#firstname').val(response.Firstname);
+                    $('#middlename').val(response.Middlename);
+                    $('#lastname').val(response.Lastname);
+                    $('#age').val(response.Age);
+                    $('#birthdate').val(response.Birthdate);
+                    $('#sex').val(response.Sex);
+                    $('#birthplace').val(response.BirthPlace);
+                    $('#citizenship').val(response.Citizenship);
+                    $('#nameofmother').val(response.NameOfMother);
+                    $('#address').val(response.Address);
+                    $('#height').val(response.Height);
+                    $('#weight').val(response.Weight);
+                    $('#civilstatus').val(response.CivilStatus);
+                    $('#pregnant').val(response.Pregnant);
+                    $('#pwd').val(response.PWD);
+                    $('#mobilenumber').val(response.MobileNum);
+                    $('#telephonenumber').val(response.TelNum);
+                    $('#emailaddress').val(response.EmailAdd);
+                    $('#educationlevel').val(response.EducationLevel);
+                    $('#completion').val(response.CompLTN);
+                    $('#highestyearlevel').val(response.HighestYrLvL);
+                    $('#graduationdate').val(response.GradDate);
+                    $('#program').val(response.Program);
+                    $('#major').val(response.Major);
+                    $('#schoolname').val(response.SchoolName);
+                    $('#schooladdress').val(response.SchoolAdd);
+                    $('#inclusiveyears').val(response.InclusiveYears);
+                    $('#presentemployment').val(response.PresentEmployment);
+                    $('#agency').val(response.Agency);
+                    $('#agencyaddress').val(response.AgencyAdd);
+                    $('#jobtitle').val(response.JobTitle);
+                    $('#jobyears').val(response.JobYears);
+                    $('#employmentstatus').val(response.EmploymentStatus);
+                   
+                },
+                error: function (xhr, status, error) {
+                    console.error('Error fetching applicant details:', error);
+                }
+            });
+
         $("#step1").is("CSE-Form-step-active");
 
         if ($("#step1").hasClass("CSE-form-step-active")) {
@@ -751,7 +800,14 @@
             SubmitApplication(objperson);
         });
 
+        });
+
+    $('#editForm').submit(function (event) {
+        event.preventDefault();
     });
+
+    var applicantId = 0; 
+    fetchApplicantDetails(applicantId);
 
     function validateStep(activeId) {
         var isValid = true;
@@ -791,3 +847,4 @@
     }
 </script>
 </html>
+
